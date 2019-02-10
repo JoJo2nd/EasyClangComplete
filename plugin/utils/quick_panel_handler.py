@@ -26,7 +26,7 @@ class QuickPanelHandler(object):
         contents = []
         for error_dict in self.errors:
             error_type = 'ERROR'
-            if error_dict['severity'] < 3:
+            if 'severity' in error_dict and error_dict['severity'] < 3:
                 error_type = 'WARNING'
             contents.append(
                 [
